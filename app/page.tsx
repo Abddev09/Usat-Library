@@ -427,8 +427,10 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background mt-10">
       {/* Swiperga yuklangan kitoblarni prop orqali uzatamiz */}
-      <BookSwiper initialBooks={swiperBooks} />
 
+      {books.length === 0  ? <div className="w-full flex justify-center items-center h-[50vh]"><h1 className="text-[30px] font-extrabold text-[#21466D]">Kitoblar hali mavjud emas</h1></div> : 
+      <div>
+      <BookSwiper initialBooks={swiperBooks} />
       <div className="container mx-auto px-4 py-8">
         <div className="w-full px-10 py-8 text-start">
           {!isLoading && <h1 className="text-[38px] font-[700] text-[#21466D]">{t("common.allBooks")}</h1>}
@@ -554,6 +556,8 @@ export default function HomePage() {
           </div>
         )}
       </div>
+      </div>
+      }
 
       <ScrollToTopButton />
     </div>

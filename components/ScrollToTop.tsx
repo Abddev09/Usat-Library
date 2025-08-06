@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import { ArrowUp } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -68,7 +68,7 @@ export default function ScrollToTopButton() {
           }}
           whileTap={{ scale: 0.95 }}
           style={isNearFooter ? nearFooterColor : defaultColor}
-          className="fixed bottom-12 max-md:bottom-20 right-12 border max-lg:right-4 max-lg:bottom-5 z-[99] rounded-full h-16 w-16 max-md:h-12 max-md:w-12 flex items-center justify-center shadow-lg cursor-pointer border-[#ffc82a] transition-colors duration-300"
+          className="fixed bottom-12 max-md:bottom-20 right-12 max-lg:right-4 max-lg:bottom-5 z-[99] rounded-full h-16 w-16 max-md:h-12 max-md:w-12 flex items-center justify-center shadow-lg cursor-pointer transition-colors duration-300"
         >
           <button
             onClick={scrollToTop}
